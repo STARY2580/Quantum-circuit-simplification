@@ -1,5 +1,5 @@
 # Quantum-circuit-simplification  
-（一）、量子线路进行化简，规则可以自己添加，已经内置五个规则；  
-（二）、五个规则分别是：1.刚初始的CNOT门可以删除；2.刚初始的Rz门可以删除；3.两个连续的CNOT门可以删除一个4.两个相同的旋转门可以融合，相位相加；5.超过三个以上的单量子门可以用通用U门表示；  
-（三）、还有一个交换规则，Rz可以和CNOT门的控制位交换位置，Rx可以和CNOT门的受控位交换位置；  
-（四）、输入的量子现在只支持Rz,Rx和CNOT门，输入线路格式按照Example: [('rx', 0), ('rz', 1), ('cx', 0, 1)]列表形式，参数也按照列表量子门顺序输入，CNOT门没有参数，参数列表比结构列表少所有CNOT门的个数；  
+(1) Quantum circuits can be simplified, rules can be added independently, and five rules are already built-in.
+(2) The five rules are: 1. The initial CNOT gate can be removed; 2. The initial Rz gate can be removed; 3. One of two consecutive CNOT gates can be removed; 4. Two identical rotation gates can be merged with their phases added together; 5. More than three single-qubit gates can be represented by a universal U gate.
+(3) There is also a swap rule: Rz can swap positions with the control bit of the CNOT gate, and Rx can swap positions with the target bit of the CNOT gate.
+(4) The input quantum currently only supports Rz, Rx, and CNOT gates. The input circuit format follows the example: [('rx', 0), ('rz', 1), ('cx', 0, 1)] in list form, and the parameters are also input in the order of the list of quantum gates. The CNOT gate has no parameters, so the parameter list has fewer items than the structure list by the total number of CNOT gates.
